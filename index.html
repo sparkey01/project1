@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway Ticket Booking</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="assets/1.jpeg" alt="Railway Train">
+            <h1>Railway Ticket Booking</h1>
+
+        </div>
+        <form class="booking-form" id="bookingForm">
+                <div class="form-group">
+                    <label for="name">Passenger Name</label>
+                    <input type="text" id="name" placeholder="Enter Passenger name" required>
+                    <label for="age">Age</label>
+                    <input type="number" id="age" placeholder="Enter Passenger Age" required>
+                </div>
+                <div class="form-group">
+                    <label for="from">From Station</label>
+                    <select id="from" required>
+                        <option value="">Select Station</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Patna">Patna</option>
+                        <option value="Kolkata">Kolkata</option>
+                        <option value="Banglore">Banglore</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Jaipur">Jaipur</option>
+                        <option value="Lucknow">Lucknow</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Indore">Indore</option>
+                        
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="to">To Station</label>
+                    <select id="to" required>
+                        <option value="">Select Station</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Patna">Patna</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Banglore">Banglore</option>
+                        <option value="Kolkata">Kolkata</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Jaipur">Jaipur</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Lucknow">Lucknow</option>
+                        <option value="Indore">Indore</option>
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Travel Date</label>
+                    <input type="date" id="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="class">Class</label>
+                    <select id="class" required>
+                        <option value="">select Class</option>
+                        <option value="First AC">First AC</option>
+                        <option value="Second AC">Second AC</option>
+                        <option value="Third AC">Third AC</option>
+                        <option value="Sleeper">Sleeper</option>
+                        <option value="Second Sitting">Second Sitting</option>
+                    </select>
+                </div>
+
+                <button type="submit">Book Ticket</button>
+            </form>
+
+            <div class="ticket" id="ticket">
+                <h3>E-Ticket</h3>
+                <div class="ticket-details" id="ticketDetails">
+
+                </div>
+                <button id="downloadBtn" onclick="downloadTicket()">Download Ticket</button>
+            </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
